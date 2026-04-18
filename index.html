@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trejo Landscaping | Landscaper in San, Landscaper</title>
+  <meta name="description" content="Trejo Landscaping — professional landscaper services in San, Landscaper. Call (210) 550-0292 for a free estimate." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"></script>
+
+  <style>
+    [x-cloak]{display:none!important}
+    body{font-family:'Inter',system-ui,sans-serif}
+    .fade-up{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+    .fade-up.visible{opacity:1;transform:none}
+  </style>
+</head>
+<body class="antialiased bg-white text-gray-900"
+      x-data x-init="
+        const io = new IntersectionObserver(
+          entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
+          {threshold:0.1}
+        );
+        document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+      ">
+<div class="fixed top-0 inset-x-0 z-[60] bg-amber-500 text-gray-900 text-center text-xs sm:text-sm font-semibold py-2 px-4">
+         DEMO SITE — Contact Verko to customize with your real content ·
+         <a href="https://getverko.com" class="underline underline-offset-2 ml-1">getverko.com</a>
+       </div>
+
+<!-- ━━ Sticky nav ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<header class="fixed pt-8 sm:pt-7 inset-x-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100" style="top:36px">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-2.5">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style="background:#15803d">
+         <i class="ph-bold ph-tree text-white" style="font-size:14px"></i>
+       </div>
+      <span class="font-bold text-gray-900 truncate max-w-[180px] sm:max-w-none">Trejo Landscaping</span>
+    </div>
+    <a href="tel:2105500292"
+       class="inline-flex items-center gap-2 text-white text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 transition shrink-0"
+       style="background:#15803d">
+      <i class="ph-bold ph-phone" style="font-size:14px"></i>
+      <span class="hidden sm:inline">(210) 550-0292</span>
+      <span class="sm:hidden">Call</span>
+    </a>
+  </div>
+</header>
+
+<!-- ━━ Hero ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="relative min-h-[100svh] flex flex-col items-center justify-center bg-gray-950 pt-16 overflow-hidden">
+
+  <!-- Gradient orbs -->
+  <div class="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full blur-3xl opacity-20 pointer-events-none"
+       style="background:#15803d"></div>
+  <div class="absolute -bottom-32 -right-32 w-[400px] h-[400px] rounded-full blur-3xl opacity-10 pointer-events-none"
+       style="background:#15803d"></div>
+
+  <!-- Dot grid -->
+  <div class="absolute inset-0 opacity-[0.025] pointer-events-none"
+       style="background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:32px 32px"></div>
+
+  <div class="relative z-10 text-center px-5 max-w-4xl mx-auto w-full"
+       x-data="{v:false}" x-init="$nextTick(()=>setTimeout(()=>v=true,80))">
+    <div :class="v?'opacity-100 translate-y-0':'opacity-0 translate-y-8'"
+         class="transition-all duration-700 ease-out">
+
+      <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-wider px-4 py-1.5 rounded-full mb-8 border uppercase"
+           style="background:#15803d1a;color:#dcfce7;border-color:#15803d40">
+        <i class="ph-bold ph-map-pin" style="font-size:11px"></i>
+        San, Landscaper
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-5 leading-tight tracking-tight">
+        Trejo Landscaping
+      </h1>
+
+      <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+        Transforming San Landscapes Into Beautiful Outdoor Living Spaces
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a href="tel:2105500292"
+           class="inline-flex items-center gap-2.5 text-white text-base font-bold px-8 py-4 rounded-2xl hover:opacity-90 transition-all hover:scale-[1.02]"
+           style="background:#15803d;box-shadow:0 20px 50px #15803d50">
+          <i class="ph-bold ph-phone-call text-lg"></i>
+          Call Now — (210) 550-0292
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center gap-2 text-white/80 border border-white/20 text-base font-semibold px-8 py-4 rounded-2xl hover:bg-white/5 transition-all">
+          Get Free Quote
+          <i class="ph-bold ph-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="relative mt-20 pt-10 border-t border-white/10 grid grid-cols-3 gap-4">
+      <div class="text-center">
+        <div class="text-4xl font-black text-white">4.9★</div>
+        <div class="text-gray-500 text-xs mt-1 uppercase tracking-widest">Rating</div>
+      </div>
+      <div class="text-center border-x border-white/10">
+        <div class="text-4xl font-black text-white">37+</div>
+        <div class="text-gray-500 text-xs mt-1 uppercase tracking-widest">Reviews</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-black text-white">10+</div>
+        <div class="text-gray-500 text-xs mt-1 uppercase tracking-widest">Yrs Exp</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#services"
+     class="absolute bottom-8 flex flex-col items-center gap-1 text-gray-600 hover:text-gray-400 transition z-10">
+    <span class="text-xs tracking-widest uppercase">Scroll</span>
+    <i class="ph-bold ph-caret-down animate-bounce"></i>
+  </a>
+</section>
+
+<!-- ━━ Trust bar ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="py-5 border-b border-gray-100" style="background:#15803d08">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+      
+          <div class="flex items-center gap-2 text-gray-700 font-medium text-sm">
+            <i class="ph-bold ph-certificate text-lg" style="color:#15803d"></i>
+            Licensed & Insured
+          </div>
+          <div class="flex items-center gap-2 text-gray-700 font-medium text-sm">
+            <i class="ph-bold ph-handshake text-lg" style="color:#15803d"></i>
+            Free Estimates
+          </div>
+          <div class="flex items-center gap-2 text-gray-700 font-medium text-sm">
+            <i class="ph-bold ph-map-pin text-lg" style="color:#15803d"></i>
+            Locally Owned
+          </div>
+          <div class="flex items-center gap-2 text-gray-700 font-medium text-sm">
+            <i class="ph-bold ph-star-four text-lg" style="color:#15803d"></i>
+            Top Rated
+          </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ Services ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="services" class="py-24 px-5 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-16 fade-up">
+      <span class="inline-block text-xs font-bold tracking-widest uppercase mb-3 px-3 py-1 rounded-full"
+            style="background:#dcfce7;color:#15803d">What We Do</span>
+      <h2 class="text-4xl font-black text-gray-900 mt-2">Our Services</h2>
+      <p class="text-gray-500 mt-3 max-w-xl mx-auto">
+        Professional landscaper services in San and surrounding areas.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:#dcfce7">
+            <i class="ph-bold ph-tree text-2xl" style="color:#15803d"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-base">Lawn Design & Installation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Custom landscape design and sod installation to transform your outdoor space into a beautiful, functional yard.</p>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:#dcfce7">
+            <i class="ph-bold ph-leaf text-2xl" style="color:#15803d"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-base">Hardscape Construction</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Professional installation of patios, walkways, retaining walls, and other structural landscape features.</p>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:#dcfce7">
+            <i class="ph-bold ph-sun text-2xl" style="color:#15803d"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-base">Irrigation System Installation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Expert design and installation of efficient sprinkler and drip irrigation systems for healthy plant growth.</p>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:#dcfce7">
+            <i class="ph-bold ph-flower text-2xl" style="color:#15803d"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-base">Landscape Maintenance</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Ongoing lawn care including mowing, weeding, pruning, and seasonal cleanup to keep your yard pristine year-round.</p>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:#dcfce7">
+            <i class="ph-bold ph-scissors text-2xl" style="color:#15803d"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-base">Tree & Shrub Services</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Professional trimming, pruning, removal, and planting of trees and shrubs to enhance your landscape.</p>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:#dcfce7">
+            <i class="ph-bold ph-drop text-2xl" style="color:#15803d"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-base">Mulch & Soil Installation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Delivery and installation of premium mulch and soil amendments to improve plant health and landscape appearance.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ Reviews ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="reviews" class="py-24 px-5 bg-white">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-16 fade-up">
+      <span class="inline-block text-xs font-bold tracking-widest uppercase mb-3 px-3 py-1 rounded-full"
+            style="background:#dcfce7;color:#15803d">Happy Customers</span>
+      <h2 class="text-4xl font-black text-gray-900 mt-2">What People Say</h2>
+      <div class="flex items-center justify-center gap-2 mt-4">
+        <div class="flex gap-0.5"><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i></div>
+        <span class="font-bold text-gray-900">4.9</span>
+        <span class="text-gray-400 text-sm">(37+ reviews)</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="flex gap-0.5 mb-3"><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i></div>
+          <p class="text-gray-700 leading-relaxed mb-5 text-sm">&ldquo;Trejo Landscaping completely redesigned my backyard and the results are stunning. Their attention to detail and professionalism made the entire process smooth and enjoyable.&rdquo;</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
+                 style="background:#15803d">M</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Marcus</div>
+              <div class="text-gray-400 text-xs">San Diego</div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="flex gap-0.5 mb-3"><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i></div>
+          <p class="text-gray-700 leading-relaxed mb-5 text-sm">&ldquo;I've been using their maintenance service for two years and my lawn has never looked better. They're reliable, affordable, and always on time.&rdquo;</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
+                 style="background:#15803d">E</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Elena</div>
+              <div class="text-gray-400 text-xs">San Jose</div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div class="flex gap-0.5 mb-3"><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i><i class="ph-fill ph-star" style="color:#f59e0b"></i></div>
+          <p class="text-gray-700 leading-relaxed mb-5 text-sm">&ldquo;The team installed a beautiful patio and new irrigation system that has saved me so much time and water. Highly recommend their hardscape work!&rdquo;</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
+                 style="background:#15803d">D</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">David</div>
+              <div class="text-gray-400 text-xs">San Francisco</div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ About ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="about" class="py-24 px-5" style="background:#15803d06">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <div class="fade-up">
+        <span class="inline-block text-xs font-bold tracking-widest uppercase mb-3 px-3 py-1 rounded-full"
+              style="background:#dcfce7;color:#15803d">Our Story</span>
+        <h2 class="text-4xl font-black text-gray-900 mt-2 mb-6">About Trejo Landscaping</h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-8">Trejo Landscaping has been proudly serving the San community with passion, precision, and a deep respect for the local environment. Our team brings creativity and craftsmanship to every project, whether it's a lush garden redesign, clean seasonal maintenance, or a full outdoor transformation. With a 4.9-star reputation built on 37 honest reviews, our neighbors trust us to make their outdoor spaces something truly worth coming home to.</p>
+        <div class="flex flex-wrap gap-3 mb-8">
+          
+              <div class="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border"
+                   style="color:#15803d;border-color:#15803d40;background:#15803d08">
+                <i class="ph-bold ph-shield-check"></i>Licensed & Insured
+              </div>
+              <div class="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border"
+                   style="color:#15803d;border-color:#15803d40;background:#15803d08">
+                <i class="ph-bold ph-clock"></i>Fast Response
+              </div>
+              <div class="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border"
+                   style="color:#15803d;border-color:#15803d40;background:#15803d08">
+                <i class="ph-bold ph-thumbs-up"></i>Satisfaction Guaranteed
+              </div>
+        </div>
+        <a href="tel:2105500292"
+           class="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl hover:opacity-90 transition"
+           style="background:#15803d">
+          <i class="ph-bold ph-phone-call"></i>
+          (210) 550-0292
+        </a>
+      </div>
+
+      <div class="fade-up grid grid-cols-2 gap-4">
+        <div class="col-span-2 aspect-video rounded-2xl relative overflow-hidden"
+             style="background:linear-gradient(135deg,#15803d,#15803d99)">
+          <i class="ph-bold ph-tree absolute inset-0 m-auto text-white/10 w-fit h-fit" style="font-size:10rem"></i>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white">
+              <div class="text-6xl font-black">10+</div>
+              <div class="text-lg font-medium opacity-75">Years of Excellence</div>
+            </div>
+          </div>
+        </div>
+        <div class="aspect-square rounded-2xl flex items-center justify-center" style="background:#dcfce7">
+          <div class="text-center">
+            <div class="text-4xl font-black" style="color:#15803d">4.9★</div>
+            <div class="text-gray-500 text-sm mt-1">Avg Rating</div>
+          </div>
+        </div>
+        <div class="aspect-square rounded-2xl flex items-center justify-center text-white"
+             style="background:#15803d">
+          <div class="text-center">
+            <div class="text-4xl font-black">37+</div>
+            <div class="text-sm opacity-75 mt-1">Reviews</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ━━ Gallery ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="gallery" class="py-24 px-5 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-16 fade-up">
+      <span class="inline-block text-xs font-bold tracking-widest uppercase mb-3 px-3 py-1 rounded-full"
+            style="background:#dcfce7;color:#15803d">Portfolio</span>
+      <h2 class="text-4xl font-black text-gray-900 mt-2">Our Work</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      
+        <div class="fade-up relative aspect-square rounded-2xl overflow-hidden group cursor-pointer"
+             style="background:linear-gradient(135deg,#15803dff,#15803d55)">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <i class="ph-bold ph-tree text-7xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+          </div>
+          <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/0 group-hover:from-black/40 transition-all duration-300">
+            <div class="w-full p-4 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <span class="text-white text-sm font-semibold">Project 1</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up relative aspect-square rounded-2xl overflow-hidden group cursor-pointer"
+             style="background:linear-gradient(135deg,#15803ddd,#15803d55)">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <i class="ph-bold ph-leaf text-7xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+          </div>
+          <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/0 group-hover:from-black/40 transition-all duration-300">
+            <div class="w-full p-4 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <span class="text-white text-sm font-semibold">Project 2</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up relative aspect-square rounded-2xl overflow-hidden group cursor-pointer"
+             style="background:linear-gradient(135deg,#15803dbb,#15803d55)">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <i class="ph-bold ph-sun text-7xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+          </div>
+          <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/0 group-hover:from-black/40 transition-all duration-300">
+            <div class="w-full p-4 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <span class="text-white text-sm font-semibold">Project 3</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up relative aspect-square rounded-2xl overflow-hidden group cursor-pointer"
+             style="background:linear-gradient(135deg,#15803dcc,#15803d55)">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <i class="ph-bold ph-flower text-7xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+          </div>
+          <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/0 group-hover:from-black/40 transition-all duration-300">
+            <div class="w-full p-4 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <span class="text-white text-sm font-semibold">Project 4</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up relative aspect-square rounded-2xl overflow-hidden group cursor-pointer"
+             style="background:linear-gradient(135deg,#15803daa,#15803d55)">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <i class="ph-bold ph-scissors text-7xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+          </div>
+          <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/0 group-hover:from-black/40 transition-all duration-300">
+            <div class="w-full p-4 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <span class="text-white text-sm font-semibold">Project 5</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up relative aspect-square rounded-2xl overflow-hidden group cursor-pointer"
+             style="background:linear-gradient(135deg,#15803dee,#15803d55)">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <i class="ph-bold ph-drop text-7xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+          </div>
+          <div class="absolute inset-0 flex items-end bg-gradient-to-t from-black/0 group-hover:from-black/40 transition-all duration-300">
+            <div class="w-full p-4 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <span class="text-white text-sm font-semibold">Project 6</span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ Contact ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="contact" class="py-24 px-5 bg-white">
+  <div class="max-w-2xl mx-auto">
+
+    <div class="text-center mb-12 fade-up">
+      <span class="inline-block text-xs font-bold tracking-widest uppercase mb-3 px-3 py-1 rounded-full"
+            style="background:#dcfce7;color:#15803d">Reach Out</span>
+      <h2 class="text-4xl font-black text-gray-900 mt-2">Get a Free Quote</h2>
+      <p class="text-gray-500 mt-3">We respond within 24 hours.</p>
+    </div>
+
+    <form action="https://formspree.io/f/xknkpone" method="POST"
+          class="fade-up space-y-4 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-gray-100/80 p-8"
+          x-data="{sent:false}"
+          @submit.prevent="
+            fetch($el.action,{method:'POST',body:new FormData($el),headers:{'Accept':'application/json'}})
+              .then(r=>{if(r.ok){sent=true;$el.reset()}})
+          ">
+
+      <div x-show="sent" class="text-center py-10" x-cloak>
+        <i class="ph-bold ph-check-circle text-6xl mb-3 block" style="color:#15803d"></i>
+        <p class="font-bold text-gray-900 text-xl">Message sent!</p>
+        <p class="text-gray-500 mt-1">We'll be in touch shortly.</p>
+      </div>
+
+      <div x-show="!sent">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Your Name</label>
+            <input name="name" type="text" required placeholder="John Smith"
+                   class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm"
+                   style="--tw-ring-color:#15803d60" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Phone Number</label>
+            <input name="phone" type="tel" placeholder="(555) 000-0000"
+                   class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm"
+                   style="--tw-ring-color:#15803d60" />
+          </div>
+        </div>
+        <div class="mt-4">
+          <label class="block text-sm font-semibold text-gray-700 mb-1.5">Email Address</label>
+          <input name="email" type="email" required placeholder="you@example.com"
+                 class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm"
+                 style="--tw-ring-color:#15803d60" />
+        </div>
+        <div class="mt-4">
+          <label class="block text-sm font-semibold text-gray-700 mb-1.5">How can we help?</label>
+          <textarea name="message" rows="4" required placeholder="Describe your project…"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm resize-none"
+                    style="--tw-ring-color:#15803d60"></textarea>
+        </div>
+        <div class="mt-6">
+          <button type="submit"
+                  class="w-full text-white font-bold py-4 rounded-xl hover:opacity-90 transition-all hover:scale-[1.01] text-base"
+                  style="background:#15803d">
+            Send Message &nbsp;<i class="ph-bold ph-paper-plane-tilt"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ━━ Footer ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<footer class="bg-gray-950 py-14 px-5">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+
+      <div>
+        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0" style="background:#15803d">
+         <i class="ph-bold ph-tree text-white" style="font-size:13px"></i>
+       </div>
+          <span class="font-bold text-white">Trejo Landscaping</span>
+        </div>
+        <p class="text-gray-500 text-sm">San, Landscaper</p>
+      </div>
+
+      <a href="tel:2105500292"
+         class="text-lg font-bold transition hover:opacity-80"
+         style="color:#15803d">
+        <i class="ph-bold ph-phone mr-1"></i>(210) 550-0292
+      </a>
+
+      <div class="text-gray-600 text-sm">
+        <p>© 2026 Trejo Landscaping. All rights reserved.</p>
+        <p class="mt-1">Site by
+          <a href="https://getverko.com" target="_blank" rel="noopener"
+             class="text-gray-400 hover:text-white transition underline underline-offset-2">Verko</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ━━ Mobile fixed CTA ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<div class="fixed bottom-0 inset-x-0 p-3 md:hidden z-40">
+  <a href="tel:2105500292"
+     class="flex items-center justify-center gap-2.5 text-white font-bold py-4 rounded-2xl text-base"
+     style="background:#15803d;box-shadow:0 8px 30px #15803d70">
+    <i class="ph-bold ph-phone-call text-lg"></i>
+    Call (210) 550-0292
+  </a>
+</div>
+
+</body>
+</html>
